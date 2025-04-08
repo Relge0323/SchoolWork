@@ -9,6 +9,38 @@
 
       Filename:       js07.js
  */
+document.getElementById("getFile").onchange = function() {
+
+    let userFile = this.files[0]; //files is an array that holds file objects
+    let reader = new FileReader();
+    reader.readAsText(userFile);
+    let sourceDoc = document.getElementById("wc_document");
+
+    reader.onload = function() {
+        let sourceText = sourceDoc.textContent;
+
+        try {
+            let isText = userFile.type.startsWith("text");
+
+            if (!isText) {
+                throw userFile.name + "is not a text file";
+            }
+            
+            sourceDoc.innerHTML = reader.result;
+            wordCloud(sourceText);
+            
+        } catch (err) {
+            window.alert(err);
+        }
+
+        function wordCloud(sourceText) {
+            sourceText = sourceText.toLowerCase();
+            sourceText = sourceText.trim();
+
+            console.log(sourceText);
+        }      
+    }
+}
 
 
 

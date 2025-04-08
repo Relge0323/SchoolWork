@@ -17,7 +17,7 @@ def makeWordCloud(file, mask):
 
     if mask:
         # found this image on pixabay.com
-        mask_image = np.array(Image.open("dragonSil.png"))
+        mask_image = np.array(Image.open("dragonSil2.png"))
     else:
         mask_image = None
     

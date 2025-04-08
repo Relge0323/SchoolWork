@@ -10,7 +10,8 @@ import pandas as pd
 def main():
     """Creates the data frame and view and starts the app."""
     frame = pd.read_csv("cleanbrogdonstats.csv")
-    HoopStatsView(frame)
+    app = HoopStatsView(frame)
+    app.mainloop()
 
 if __name__ == "__main__":
     main()
