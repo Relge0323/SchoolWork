@@ -1,0 +1,5 @@
+The != operator is used to do comparisons on values to see if they are equal or not.
+
+!= uses types coercion to check if the values are equal.  something like 23 and "23" would be considered equal.
+
+!== done on the same values would return false because it needs to be EXACT.
