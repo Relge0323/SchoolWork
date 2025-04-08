@@ -1,0 +1,40 @@
+/*
+Author: Michael Egler
+File Name: styles.css
+Date: 03/20/2025
+*/
+
+/* Apply a sans-serif font and background color to the page */
+body {
+    background-color: #ffe5dc;
+    margin: 20px;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid #fd4d0c;
+    box-shadow: 5px 5px 15px 5px #792101;
+    background-color: white;
+}
+
+/* Style table headers */
+th {
+    background-color: #fd4d0c;
+    color: white;
+    padding: 10px;
+    border: 2px solid #a22c02;
+}
+
+/* Style table data cells */
+td {
+    padding: 10px;
+    border: 2px solid #a22c02;
+    text-align: center;
+}
+
+/* Apply background color to odd rows */
+tbody tr:nth-child(odd) {
+    background-color: #fe9772;
+}

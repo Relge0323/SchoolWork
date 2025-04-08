@@ -1,0 +1,68 @@
+###############################################
+Paint Job Quote Results
+###############################################
+Customer Name: Silvia
+Number of rooms to paint: 3 rooms
+Bedroom Dimensions:
+--------------------
+Length ........ 10
+Width ......... 14
+Height ........ 8
+
+The Bedroom has 1 window(s)
+Total window area (in sqft).......................  30
+Total area minus the area of window(s) (in sqft).. 354
+
+			Cost totals for the Bedroom:
+	Materials.....................$      63.72
+	Labor.........................$    1062.00
+	Cost total....................$    1125.72
+
+Kitchen Dimensions:
+--------------------
+Length ........ 7
+Width ......... 8
+Height ........ 8
+
+The Kitchen has 1 window(s)
+Total window area (in sqft).......................  20
+Total area minus the area of window(s) (in sqft).. 220
+
+			Cost totals for the Kitchen:
+	Materials.....................$      39.60
+	Labor.........................$     660.00
+	Cost total....................$     699.60
+
+Office Dimensions:
+--------------------
+Length ........ 6
+Width ......... 5
+Height ........ 8
+
+Total Office area (in sqft)     156
+
+			Cost totals for the Office:
+	Materials.....................$      28.08
+	Labor.........................$     468.00
+	Cost total....................$     496.08
+
+****** Paint Job Summary ******
+Customer: Silvia
+Number of rooms: 3
+
+Bedroom Information:
+	Number of Windows: 1
+	        Room Area: 354 sqrft
+	       Total Cost: $1125.72
+
+Kitchen Information:
+	Number of Windows: 1
+	        Room Area: 220 sqrft
+	       Total Cost: $699.6
+
+Office Information:
+	Number of Windows: 0
+	        Room Area: 156 sqrft
+	       Total Cost: $496.08
+
+Grand total for both rooms: $2321.40

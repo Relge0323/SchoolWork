@@ -1,0 +1,51 @@
+/* CSS Reset */
+body, header, nav, main, footer {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+
+/* Style rules for nav */
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+/* Style rules for main */
+main {
+    text-align: center;
+}
+
+/* Style rule for table */
+table {
+    width: 15%;
+    margin: 0 auto;
+    border: 3px solid pink;
+    border-collapse: collapse;
+}
+
+/* Style rule for caption */
+caption {
+    font-size: 2em;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+td, th {
+    border: 3px solid pink;
+    border-collapse: collapse;
+}
+
