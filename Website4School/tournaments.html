@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Magic: the Gathering</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/tourney.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Tournament Registry</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cardSearch.html">Card Search and Database</a></li>
+            <li><a href="setTracker.html">Track New Sets</a></li>
+            <li><a href="webSecurity.html">Learn About Web Security</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+
+    <main>
+
+        <form id="tournament-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+
+            <label for="format-type">Format:</label>
+            <select id="format-type" name="format-type" required>
+                <option value="standard">Standard</option>
+                <option value="modern">Modern</option>
+                <option value="legacy">Legacy</option>
+                <option value="commander">Commander</option>
+                <option value="draft">Booster Draft</option>
+            </select><br><br>
+
+            <hr>
+            <label>Ranking:</label><br>
+
+            <input type="radio" id="bronze" name="rank" value="Bronze">
+            <label for="bronze">Bronze</label><br>
+
+            <input type="radio" id="silver" name="rank" value="Silver">
+            <label for="silver">Silver</label><br>
+
+            <input type="radio" id="gold" name="rank" value="Gold">
+            <label for="gold">Gold</label><br>
+
+            <input type="radio" id="platinum" name="rank" value="Platinum">
+            <label for="platinum">Platinum</label><br>
+
+            <input type="radio" id="diamond" name="rank" value="Diamond">
+            <label for="diamond">Diamond</label><br>
+
+            <input type="radio" id="mythic" name="rank" value="Mythic">
+            <label for="mythic">Mythic</label><br><br>
+            <hr>
+
+
+            <label for="terms">I agree to the tournament rules and terms:</label>
+            <input type="checkbox" id="terms" name="terms" required><br>
+
+            <input type="submit" value="Register">
+        </form>
+    </main>
+</body>
+</html>
