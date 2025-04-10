@@ -9,8 +9,8 @@ def main():
 
     # add the contacts table
     cur.execute('''CREATE TABLE Contacts (Contact ID INTEGER PRIMARY KEY NOT NULL,
-                                            Name TEXT,
-                                            Email TEXT)''')
+                                          Name TEXT,
+                                          Email TEXT)''')
     
     # commit the changes
     conn.commit()
