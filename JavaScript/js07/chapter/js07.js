@@ -37,8 +37,31 @@ document.getElementById("getFile").onchange = function() {
             sourceText = sourceText.toLowerCase();
             sourceText = sourceText.trim();
 
-            console.log(sourceText);
-        }      
+            let alphaRegx = /[^a-zA-Z\s]/g;
+            sourceText - sourceText.replace(alphaRegx, "");
+
+            for (let i = 0; i < stopWords.length; i++) {
+                let stopRegx = new RegExp("\\b"+stopWords[i]+"\\b", "g");
+                sourceText = sourceText.replace(stopRegx, "");
+            }
+
+            let words = sourceText.split(/\s+/g);
+            words.sort();
+
+            let unique = [ [words[0],1] ];
+            let uniqueIndex = 0
+            for (let i = 1; i < words.length; i++) {
+                if (words[i] === words[i-1]) {
+                    unique[uniqueIndex][1]++;
+                } else {
+                    unique[++uniqueIndex] = [words[i],1];
+                }
+            }
+
+            console.log(unique);
+        }
+
+        
     }
 }
 
