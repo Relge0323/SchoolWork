@@ -62,7 +62,52 @@ document.getElementById("getFile").onchange = function() {
         // Place the remaining words in array
         let words = sourceText.split(/\s+/g);
 
-        console.log(words);
+        // Sort the words in alphabetical order
+        words.sort();
+
+        // create a 2d array in which each item is array
+        // containing a word and its duplicate count
+        let unique = [ [words[0], 1] ];
+
+        // keep an index of the unique words
+        let uniqueIndex = 0;
+
+        for (let i = 1; i < words.length; i++) {
+            if (words[i] === words[i -1] ) {
+                // increase the duplicate count by 1
+                unique[uniqueIndex][1]++;
+            } else {
+                // add a new word to the unique array
+                uniqueIndex++;
+                unique[uniqueIndex] = [words[i], 1];
+            }
+        }
+
+        // sort by descending order of duplicate count
+        unique.sort(byDuplicate);
+        function byDuplicate(a,b) {
+            return b[1] - a[1];
+        }
+
+        // keep the top 100 words
+        unique = unique.slice(0,100);
+
+        // find the duplicates of the most-repeated word
+        let maxCount =unique[0][1];
+        // sort the word list in alphabetic order
+        unique.sort();
+
+        // reference the word cloud box
+        let cloudBox = document.getElementById("wc_cloud");
+        cloudBox.innerHTML = "";
+
+        // size each word based on its usage
+        for (let i = 0; i < unique.length; i++) {
+            let word = document.createElement("span");
+            word.textContent = unique[i][0];
+            word.style.fontSize = unique[i][1] / maxCount + "em";
+            cloudBox.appendChild(word);
+        }
     }
 };
 
